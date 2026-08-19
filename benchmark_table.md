@@ -14,18 +14,16 @@
 
 ## Tableau (à compléter)
 
-| Modèle | MAE | RMSE | R² | Temps train (s) | Latence inférence (ms/1k) | Explicabilité (1-3) | Mémoire (Mo) |
-|---|---|---|---|---|---|---|---|
-| **mistral-tarif-v1** (baseline) | 105.0 | 139.4 | 0.39 | ~0.1 | ~1 | 3 (très explicable) | ~0.5 |
-| ... | ... | ... | ... | ... | ... | ... | ... |
-| ... | ... | ... | ... | ... | ... | ... | ... |
-| ... | ... | ... | ... | ... | ... | ... | ... |
+| Modèle                          | MAE   | RMSE  | R²   | Temps train (s) | Latence inférence (ms/1k) | Explicabilité (1-3) | Mémoire (Mo) |
+|---------------------------------|-------|-------|------|-----------------|---------------------------|---------------------|--------------|
+| **mistral-tarif-v1** (baseline) | 114.2 | 147.8 | 0.32 | ~0.1            | ~0.8                      | 3 (très explicable) | ~0.001       |
+| Ridge                           | 117.9 | 156.9 | 0.22 | 0.005           | 0.9                       | 3                   | 0.002        |
+| RandomForest                    | 52.9  | 79.3  | 0.78 | 4.6             | 15.8                      | 2                   | 150.134      |
+| HistGradientBoosting            | 51.8  | 76.3  | 0.79 | 0.4             | 4.7                       | 2                   | 0.368        |
 
 ## Interprétation pour Inès
 
-> 1-2 paragraphes en langage actuaire (pas data scientist).
-
-...
+Deux concurrents à la première place avec RandomForest et HistGB, on recommande HistGB car il est tout simplement plus précis, il fera moins d'erreur, il sera meilleur sur les cas extrèmes qui sont fréquents sur les données que vous nous avez envoyé, il est 10 fois plus rapide à entraîner et bien plus rapide en inférence : au moins 10 ms de gagnées par millier de prédictions, il est aussi bien plus léger que son concurrent.
 
 ## Recommandation
 
