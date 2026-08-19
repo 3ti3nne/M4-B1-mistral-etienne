@@ -59,8 +59,7 @@
 
 > 1-2 contributions ou questions à pousser pendant la restitution.
 
-- ...
-- ...
+- Mettre en prod un modèle qu'on ne comprend pas vraiment => les LLMs qu'on ne sait pas complètement expliquer.
 
 ---
 
